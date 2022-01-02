@@ -13,7 +13,7 @@ try {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
-  console.log("connected");
+  console.log("connectedd");
 } catch (e) {
   console.log(e);
 }
