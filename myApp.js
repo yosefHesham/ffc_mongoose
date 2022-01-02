@@ -19,13 +19,13 @@ const createAndSavePerson = (done) => {
     favoriteFoods: ["Ma2loba, fra5, la7ma"],
   });
   person.save(function (err, data) {
-    console.log(data);
+    done(data);
+
     if (error) {
       done(err);
       console.log(err);
     }
   });
-  done(null /*, data*/);
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
