@@ -1,5 +1,17 @@
+const mongoose = require("mongoose");
+
 let Person;
 
+const personSchema = mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  age: Number,
+  favoriteFoods: [String],
+});
+
+Person = mongoose.model("persons", personSchema);
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
 };
