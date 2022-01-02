@@ -16,7 +16,7 @@ const createAndSavePerson = (done) => {
   const person = new Person({
     name: "yousef",
     age: 23,
-    favoriteFoods: ["Ma2loba, fra5, la7ma"],
+    favoriteFoods: ["Ma2loba", "fra5", "la7ma"],
   });
   person.save(function (err, data) {
     done(data);
