@@ -3,6 +3,7 @@
  * the verification process may break
  *******************************************/
 
+require("dotenv").config();
 const express = require("express");
 const app = express();
 let mongoose;
@@ -12,6 +13,7 @@ try {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
+  console.log("connected");
 } catch (e) {
   console.log(e);
 }
