@@ -46,10 +46,12 @@ const findPeopleByName = (personName, done) => {
   Person.find({ name: personName }, done);
 };
 
-const findOneByFood = (food, done) => {};
+const findOneByFood = (food, done) => {
+  Person.find({ food: food }, done);
+};
 
 const findPersonById = (personId, done) => {
-  done(null /*, data*/);
+  Person.find({ _id: personId }, done);
 };
 
 const findEditThenSave = (personId, done) => {
