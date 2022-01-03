@@ -80,8 +80,7 @@ const removeById = (personId, done) => {
 
 const removeManyPeople = (done) => {
   const nameToRemove = "Mary";
-
-  done(null /*, data*/);
+  Person.remove(nameToRemove, done);
 };
 
 const queryChain = (done) => {
