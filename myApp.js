@@ -21,25 +21,25 @@ const createAndSavePerson = (done) => {
   person.save(done);
 };
 
+const arrayOfPeople = [
+  new Person({
+    name: "hussein",
+    age: 23,
+    favoriteFoods: ["Ma2loba", "fra5", "la7ma"],
+  }),
+  new Person({
+    name: "hussam",
+    age: 23,
+    favoriteFoods: ["Ma2loba", "fra5", "la7ma"],
+  }),
+  new Person({
+    name: "wael",
+    age: 23,
+    favoriteFoods: ["Ma2loba", "fra5", "la7ma"],
+  }),
+];
 const createManyPeople = (arrayOfPeople, done) => {
-  const persons = [
-    new Person({
-      name: "hussein",
-      age: 23,
-      favoriteFoods: ["Ma2loba", "fra5", "la7ma"],
-    }),
-    new Person({
-      name: "hussam",
-      age: 23,
-      favoriteFoods: ["Ma2loba", "fra5", "la7ma"],
-    }),
-    new Person({
-      name: "wael",
-      age: 23,
-      favoriteFoods: ["Ma2loba", "fra5", "la7ma"],
-    }),
-  ];
-  Person.create(persons, done);
+  Person.create(arrayOfPeople, done);
 };
 
 const findPeopleByName = (personName, done) => {
