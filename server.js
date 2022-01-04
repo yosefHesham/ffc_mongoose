@@ -349,7 +349,6 @@ router.post("/remove-many-people", function (req, res, next) {
             if (data.ok === undefined) {
               // for mongoose v4
               try {
-                data = JSON.parse(data);
               } catch (e) {
                 console.log(e);
                 return next(e);
